@@ -361,7 +361,7 @@ manually. Provide one or more --id's for manual bug addition.
             exit(1)
 
         if auto:
-            click.echo("Adding bugs to {advs} for target releases: {tr}".format(advs=advisory, tr=", ".join(bz_data['target_release']))
+            click.echo("Adding bugs to {advs} for target releases: {tr}".format(advs=advisory, tr=", ".join(bz_data['target_release'])))
         else:
             click.echo("Adding {count} bugs to {advs}".format(count=bug_count, advs=advisory))
 
@@ -531,7 +531,7 @@ PRESENT advisory. Here are some examples:
     if advisory is not False:
         # Search and attach
         try:
-            erratum = Erratum(errata_id=advisory
+            erratum = Erratum(errata_id=advisory)
             erratum.addBuilds(unshipped_builds)
             erratum.commit()
             click.secho("Attached build(s) successfully", fg='green', bold=True)
