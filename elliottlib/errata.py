@@ -142,7 +142,7 @@ def new_erratum(et_data, kind=None, release_date=None, create=False,
     https://errata.devel.redhat.com/developer-guide/api-http-api.html#api-post-apiv1erratum
 
     :param string kind: One of 'rpm' or 'image', effects boilerplate text
-    :param string release_date: A date in the form YYYY-MM-DD
+    :param string release_date: A date in the form YYYY-m-DD
     :param bool create: If true, create the erratum in the Errata
         tool, by default just the DATA we would have POSTed is
         returned

@@ -139,7 +139,7 @@ Bugzilla Bugs.
 @click.option("--date", required=False,
               default=default_release_date.strftime(YMD),
               callback=validate_release_date,
-              help="Release date for the advisory. Optional. Format: YYYY-MM-DD. Defaults to 3 weeks after the release with the highest date for that series")
+              help="Release date for the advisory. Optional. Format: YYYY-m-DD. Defaults to 3 weeks after the release with the highest date for that series")
 @click.option('--assigned-to', metavar="EMAIL_ADDR", required=True,
               envvar="ELLIOTT_ASSIGNED_TO_EMAIL",
               callback=validate_email_address,
